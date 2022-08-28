@@ -6,7 +6,8 @@ nmap <A-r> :NERDTreeFind<cr>
 nmap <C-p> :Files<cr>
 
 " fzf search globally
-nmap <A-f> :Rg <CR>
+nmap <C-\> :Rg <CR>
+vmap <C-\> :Rg @* <CR>
 
 " fzf search tags in current file
 nnoremap <A-t> :BTags<CR>
@@ -36,12 +37,12 @@ xnoremap <silent> r* "sy:let @/=@s<CR>cgn
 " commenting blocks of code.
 augroup commenting_blocks_of_code
   autocmd!
-  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
-  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
-  autocmd FileType conf,fstab       let b:comment_leader = '# '
-  autocmd FileType tex              let b:comment_leader = '% '
-  autocmd FileType mail             let b:comment_leader = '> '
-  autocmd FileType vim              let b:comment_leader = '" '
+  autocmd FileType c,cpp,js,java,scala,dts	let b:comment_leader = '// '
+  autocmd FileType sh,ruby,python		let b:comment_leader = '# '
+  autocmd FileType conf,fstab			let b:comment_leader = '# '
+  autocmd FileType tex				let b:comment_leader = '% '
+  autocmd FileType mail				let b:comment_leader = '> '
+  autocmd FileType vim				let b:comment_leader = '" '
 augroup END
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>

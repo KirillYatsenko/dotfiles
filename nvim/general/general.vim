@@ -17,6 +17,9 @@ autocmd BufWinLeave * call clearmatches()
 " show line number
 set number
 
+" show tabs/whitespaces
+set list
+
 " change grep to ripgre
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
@@ -27,3 +30,10 @@ endif
 
 " enable mouse
 set mouse=a
+
+" enable gdb
+let g:termdebug_popup = 0
+let g:termdebug_wide = 163
+
+" disable status line
+set laststatus=0
