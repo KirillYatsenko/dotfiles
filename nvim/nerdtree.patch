@@ -1,0 +1,30 @@
+diff --git a/nerdtree_plugin/fs_menu.vim b/nerdtree_plugin/fs_menu.vim
+index 05bee60..88f24e2 100644
+--- a/nerdtree_plugin/fs_menu.vim
++++ b/nerdtree_plugin/fs_menu.vim
+@@ -372,7 +372,6 @@ function! NERDTreeCopyNode()
+     endif
+     redraw!
+ endfunction
+-
+ " FUNCTION: NERDTreeCopyPath() {{{1
+ function! NERDTreeCopyPath()
+     let l:nodePath = g:NERDTreeFileNode.GetSelected().path.str()
+@@ -380,7 +379,8 @@ function! NERDTreeCopyPath()
+         if &clipboard ==# 'unnamedplus'
+             let @+ = l:nodePath
+         else
+-            let @* = l:nodePath
++            " let @* = l:nodePath
++            let @+ = l:nodePath
+         endif
+         call nerdtree#echo('The path [' . l:nodePath . '] was copied to your clipboard.')
+     else
+@@ -388,6 +388,7 @@ function! NERDTreeCopyPath()
+     endif
+ endfunction
+ 
++
+ " FUNCTION: NERDTreeQuickLook() {{{1
+ function! NERDTreeQuickLook()
+     let l:node = g:NERDTreeFileNode.GetSelected()

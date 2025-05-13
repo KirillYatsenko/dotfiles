@@ -37,3 +37,10 @@ let g:termdebug_wide = 163
 
 " disable status line
 set laststatus=0
+
+" set tabs to be 4 chars wide
+set tabstop=4
+set shiftwidth=4
+
+" don't put spaces instead of tabs
+set softtabstop=0 noexpandtab

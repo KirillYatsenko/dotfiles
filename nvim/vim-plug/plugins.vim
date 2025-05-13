@@ -18,10 +18,13 @@ Plug 'joe-skb7/cscope-maps'
 Plug 'rhysd/vim-clang-format'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-fugitive'
-Plug 'vivien/vim-linux-coding-style'
 Plug 'bogado/file-line'
-Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', { 'branch': 'master', 'do': 'yarn install --frozen-lockfile' }
 Plug 'chentau/marks.nvim'
-Plug 'antoinemadec/coc-fzf'
+" Plug 'antoinemadec/coc-fzf'
 Plug 'justinmk/vim-syntax-extra'
+Plug 'kergoth/vim-bitbake'
+Plug 'mfukar/robotframework-vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 call plug#end()

@@ -23,6 +23,20 @@ nnoremap <S-k> :m .-2<CR>==
 vnoremap <S-j> :m '>+1<CR>gv=gv
 vnoremap <S-k> :m '<-2<CR>gv=gv
 
+set clipboard=unnamed
+
+" wayland mapping for copying to cliboard
+let g:clipboard = {
+    \   'copy': {
+    \       '+': ['wl-copy', '--trim-newline'],
+    \       '*': ['wl-copy', '--trim-newline'],
+    \   },
+    \   'paste': {
+    \       '+': ['wl-paste', '--no-newline'],
+    \       '*': ['wl-paste', '--no-newline'],
+    \   },
+    \ }
+
 " copy to OS clipboard
 noremap <C-y> "*y
 noremap <C-Y> "+y
